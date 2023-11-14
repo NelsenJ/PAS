@@ -10,23 +10,42 @@ section{
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    
     background: url('assets/login-background.jpg')no-repeat;
     background-position: center;
     background-size: cover;
 }
-.form-box{
-    position: relative;
+div.wrapper{
     width: 400px;
-    height: 450px;
-    background: transparent;
+    height: 500px;
     border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
     backdrop-filter: blur(15px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.form-box-login{
+    position: absolute;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transform: translateX(43px);
+    transition: .5s ease;
+}
+.form-box-login.active{
+    transform: translateX(-410px);
+}
+.form-box-register{
+    transform: translateX(410px);
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box-register.active{
+    transform: translateX(43px);
 }
 h2{
     font-size: 2em;
@@ -115,5 +134,37 @@ button{
     font-weight: 600;
 }
 .register p a:hover{
+    text-decoration: underline;
+}
+
+.login{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.login p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.login p a:hover{
+    text-decoration: underline;
+}
+
+div.register{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.register a#HomeA{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: none;
+}
+
+div.register a:hover{
     text-decoration: underline;
 }
