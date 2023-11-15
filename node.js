@@ -18,25 +18,56 @@ document.addEventListener("DOMContentLoaded", function(){
     })
     document.querySelector("#Login").addEventListener('click', function(){
         let email = localStorage.getItem("Email");
-        let pass = localStorage.getItem("Password")
+        let pass = localStorage.getItem("Password");
         let emailAns = EmailLogi.value;
         let passAns = PassLogi.value;
         if(emailAns === email && passAns === pass){
             alert("Succesfully Login")
-            document.getElementById("HomeA").style.display = "block"
+            window.open("home.html")
         }
         else{
             alert("Password or Email doesn't match registration Password or Email");
         }
     })
     document.querySelector("#Registering").addEventListener('click', function(){
-        localStorage.setItem("Username", UsernameRegi.value)
-        localStorage.setItem("Email", EmailRegi.value)
-        localStorage.setItem("Password", PasswordRegi.value)
-        alert("Succesfully Registered")
+
+        let usernamestorage = localStorage.getItem("Username");
+        let emailstorage = localStorage.getItem("Email")
+        if(usernamestorage === UsernameRegi.value || emailstorage === EmailRegi.value){
+            alert("Your Email or Username already registered");
+        }
+        else{
+            localStorage.setItem("Username", UsernameRegi.value)
+            localStorage.setItem("Email", EmailRegi.value)
+            localStorage.setItem("Password", PasswordRegi.value)
+            alert("Succesfully Registered")
+        }
     })
     document.querySelector("#reset").addEventListener('click', function(){
         localStorage.clear();
         alert("All reset");
     })
+    document.querySelector("#myCheckbox").addEventListener('click', function(){
+        let email = localStorage.getItem("Email");
+        let pass = localStorage.getItem("Password");
+        EmailLogi.value = email;
+        PassLogi.value = pass;
+        localStorage.setItem("remember", !rememberInfo)
+    })
+    var checkbox = document.getElementById("myCheckbox");
+    let rememberInfo = JSON.parse(localStorage.getItem("remember"))
+    if(rememberInfo){
+        let email = localStorage.getItem("Email");
+        let pass = localStorage.getItem("Password");
+        checkbox.checked = true;
+        localStorage.setItem("remember", true)
+        EmailLogi.value = email;
+        PassLogi.value = pass;
+    }
+    if(!localStorage.getItem("remember")){
+        localStorage.setItem("remember", false)
+        checkbox.checked = false;
+        EmailLogi.value = "";
+        PassLogi.value = "";
+    }
 })

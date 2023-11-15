@@ -14,7 +14,7 @@ function handleScroll(){
     hill1.style.top = value * 1 + 'px';
     text.style.marginTop = value * 2.5 + 'px';
     var scrollHeight = window.scrollY;
-    var scrollMaks1 = 500;
+    var scrollMaks1 = 300;
     if(scrollHeight > scrollMaks1){
         leaf.style.display = "none";
         hill5.style.display = "none";
@@ -32,3 +32,13 @@ function handleScroll(){
 
 }
 window.addEventListener('scroll', handleScroll);
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.querySelector("#Setting").addEventListener('click', () => {
+        document.getElementById("menu").classList.toggle('show');
+    })
+})
+
+document.getElementById("Signout").addEventListener('click', function(){
+    localStorage.clear();
+})
