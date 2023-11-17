@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let passAns = PassLogi.value;
         if(emailAns === email && passAns === pass){
             alert("Succesfully Login")
-            window.open("https://nelsenj.github.io/PAS/home.html")
+            window.open("index2.html")
         }
         else{
             alert("Password or Email doesn't match registration Password or Email");
