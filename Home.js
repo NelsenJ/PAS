@@ -23,7 +23,7 @@ function handleScroll(){
     hill1.style.top = value * 1 + 'px';
     text.style.marginTop = value * 2.5 + 'px';
     var scrollHeight = window.scrollY;
-    var scrollMaks1 = 200;
+    var scrollMaks1 = 300;
     if(scrollHeight > scrollMaks1){
         leaf.style.display = "none";
         hill5.style.display = "none";
