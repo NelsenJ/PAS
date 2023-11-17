@@ -4,6 +4,13 @@ let hill1 = document.getElementById('hill1');
 let hill4 = document.getElementById('hill4');
 let hill5 = document.getElementById('hill5');
 
+window.addEventListener('resize', function () {
+    if (window.innerWidth !== document.documentElement.clientWidth) {
+        document.body.style.overflowX = 'scroll';
+    } else {
+        document.body.style.overflowX = 'hidden';
+    }
+});
 
 function handleScroll(){
     let value = window.scrollY || document.documentElement.scrollTop;
@@ -14,7 +21,7 @@ function handleScroll(){
     hill1.style.top = value * 1 + 'px';
     text.style.marginTop = value * 2.5 + 'px';
     var scrollHeight = window.scrollY;
-    var scrollMaks1 = 300;
+    var scrollMaks1 = 200;
     if(scrollHeight > scrollMaks1){
         leaf.style.display = "none";
         hill5.style.display = "none";
@@ -39,6 +46,6 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 })
 
-document.getElementById("Signout").addEventListener('click', function(){
-    localStorage.clear();
-})
+var lebarJendela = window.innerWidth;
+
+console.log("Lebar Jendela: " + lebarJendela + " piksel");

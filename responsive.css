@@ -1,7 +1,3 @@
-@media(max-width: 1000px){
-    
-}
-
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
@@ -11,5 +7,5 @@
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
-}
+  }
 }
