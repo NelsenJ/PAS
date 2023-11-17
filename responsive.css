@@ -2,10 +2,153 @@
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
+    }
+    .navigation div{
+        left: 340px;
+    }
+    body{
+        width: 100vw;
+    }
+    .parallax{
+        width: 180vw;
+    }
+    .sec h2{
+        font-size: 1.5em;
+    }
+    section.sec p {
+        font-size: 1em;
+    }
+    .logo{
+        transform: translateX(-50px);
+        font-size: 1.5em;
+    }
+    #text{
+        font-size: 3em;
+    }
+    .navigation{
+        margin-left: -20px;
+    }
+    .navigation a{
+        font-size: 1.2em;
+    }
 }
-}
-@media(max-width: 574px){
+@media(max-width: 572px){
   .footer-col{
     width: 100%;
+  }
+  body{
+    width: 100vw;
+  }
+  .navigation{
+     display: none;
+  }
+  
+  .parallax{
+    width: 220vw;
+  }
+  .sec h2{
+    font-size: 1.5em;
+  }
+  section.sec p {
+    font-size: 1em;
+  }
+  .logo{
+    transform: translateX(-50px);
+  }
+  #text{
+    font-size: 3em;
+  }
+  div.menu-icon{
+    display: flex;
+    gap:4px;
+    flex-direction: column;
+    width: 40px;
+    transform: translate(120px, 20%);
+    height: 50px;
+    z-index: 100;
+  }
+
+  div.menu-icon span{
+    display: block;
+    width: 80%;
+    height: 10%;
+    background-color: rgba(34, 149, 128, 0.804);
+  }
+  div.hide-nav{
+    height: 100vh;
+    width: 60vw;
+    
+    position: absolute;
+    display: none;
+    top: 0px;
+    right: 0px;
+    flex-direction: column;
+    background-color: white;
+    animation: unshown 0.5s ease-in-out;
+  }
+  div.hide-nav div.top{
+    height: 20%;
+    width: 100%;
+
+  }
+  div.hide-nav div.bottom{
+    height: calc(100% - 80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  div.hide-nav div.bottom a{
+    color: rgba(34, 149, 128, 0.804);
+    text-decoration: none;
+    font-size: 1.3em;
+  }
+  div.hide-nav div.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(-15px);
+  }
+
+  div.hide-nav div.top div.image{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    background-image: url(assets/f1.png);
+  }
+  div.hide-nav div.top h1{
+    font-size: 1.5em;
+    color: #359381;
+  }
+  div.hide-nav div.bottom a:hover,
+  div.hide-nav div.bottom a.act{
+    background: #359381;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+  }
+  div.show{
+    display: flex;
+    animation: popup 0.2s ease-in-out;
+  }
+  @keyframes popup{
+    0%{
+        transform: translateX(60vw);
+    }
+    100%{
+        transform: translateX(0vw);
+    }
+  }
+  @keyframes unshown{
+    0%{
+        transform: translateX(0vw);
+    }
+    100%{
+        transform: translateX(60vw);
+    }
   }
 }

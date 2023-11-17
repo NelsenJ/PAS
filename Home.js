@@ -1,3 +1,5 @@
+
+window.addEventListener('scroll', handleScroll);
 let text = document.getElementById('text');
 let leaf = document.getElementById('leaf');
 let hill1 = document.getElementById('hill1');
@@ -38,14 +40,21 @@ function handleScroll(){
     }
 
 }
-window.addEventListener('scroll', handleScroll);
-
-document.addEventListener("DOMContentLoaded", function(){
+    document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#Setting").addEventListener('click', () => {
         document.getElementById("menu").classList.toggle('show');
     })
+    document.querySelector(".menu-icon").addEventListener('click', ()=>{
+        document.querySelector(".hide-nav").classList.toggle("show")
+    })
+    var lebarJendela = window.innerWidth;
+
+    console.log("Lebar Jendela: " + lebarJendela + " piksel");
+
+    var UserText = document.getElementById("username");
+
+    UserText.innerHTML = localStorage.getItem("Username")
 })
 
-var lebarJendela = window.innerWidth;
 
-console.log("Lebar Jendela: " + lebarJendela + " piksel");
+
