@@ -10,7 +10,7 @@
 html{
     overflow-x: hidden;
     
-  }test
+  }
 
 body{
     background: #f9f9f9;
@@ -53,6 +53,9 @@ header{
     margin: 0 10px;
     font-size: 1.5em;
     font-weight: 600;
+}
+div.hide-nav{
+    display: none;
 }
 .navigation div{
     left: 400px;
@@ -131,6 +134,9 @@ header{
     background-size: 100% 100%;
     pointer-events: none;
     background-position: center;
+}
+div.menu-icon{
+    display: none;
 }
 #hill1{
     background-image: url(assets/hill1.png);
