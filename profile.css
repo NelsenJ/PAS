@@ -152,28 +152,28 @@ section.content div.main{
     background-position: center;
 }
 #hill1{
-    background-image: url(assets/hill1.png);
+    background-image: url(hill1.png);
 }
 #hill2{
-    background-image: url(assets/hill2.png);
+    background-image: url(hill2.png);
 }
 #hill3{
-    background-image: url(assets/hill3.png);
+    background-image: url(hill3.png);
 }
 #hill4{
-    background-image: url(assets/hill4.png);
+    background-image: url(hill4.png);
 }
 #hill5{
-    background-image: url(assets/hill5.png);
+    background-image: url(hill5.png);
 }
 #tree{
-    background-image: url(assets/tree.png);
+    background-image: url(tree.png);
 }
 #leaf{
-    background-image: url(assets/leaf.png);
+    background-image: url(leaf.png);
 }
 #plant{
-    background-image: url(assets/plant.png);
+    background-image: url(plant.png);
 }
 
 div.main div.top{
@@ -188,7 +188,7 @@ div.main div.top div.image{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(assets/f1.png);
+    background-image: url(f1.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

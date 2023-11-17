@@ -118,7 +118,7 @@
     border-radius: 25px;
     background-size: 100% 100%;
     margin-left: 20px;
-    background-image: url(assets/f1.png);
+    background-image: url(f1.png);
   }
   div.hide-nav div.top h1{
     font-size: 1.5em;
